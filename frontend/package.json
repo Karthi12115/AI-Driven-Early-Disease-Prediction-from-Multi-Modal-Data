@@ -1,0 +1,10 @@
+{
+  "name": "multimodal-healthcare-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python -m http.server 5173 -d ."
+  },
+  "description": "React dashboard for AI-driven early disease prediction from multimodal data."
+}
+
