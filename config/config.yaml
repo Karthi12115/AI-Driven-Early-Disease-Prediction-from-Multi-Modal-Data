@@ -1,0 +1,46 @@
+project:
+  name: multimodal-healthcare-prediction
+  seed: 42
+
+modalities:
+  ehr: true
+  genomics: true
+  wearable: true
+  image: true
+  text: true
+
+model:
+  embedding_dim: 128
+  outcomes:
+    - mortality
+    - long_stay
+    - readmission
+    - clinical_event
+  ehr_input_dim: 32
+  genomics_input_dim: 64
+  wearable_input_dim: 8
+  wearable_hidden_dim: 64
+  image_channels: 3
+  text_vocab_size: 5000
+  text_sequence_length: 128
+  dropout: 0.2
+
+training:
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.001
+  validation_split: 0.2
+  test_split: 0.1
+  task_type: multilabel_classification
+
+preprocessing:
+  missing_numeric_strategy: median
+  missing_categorical_strategy: unknown
+  wearable_sequence_length: 128
+  image_size: 224
+  normalize_images: true
+  modality_dropout: 0.1
+
+explainability:
+  save_attention_weights: true
+  save_feature_importance: true

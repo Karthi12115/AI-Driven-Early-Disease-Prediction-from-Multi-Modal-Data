@@ -1,0 +1,16 @@
+data:
+  raw: data/raw
+  processed: data/processed
+  samples: data/samples
+
+artifacts:
+  models: artifacts/models
+  encoders: artifacts/encoders
+  tokenizers: artifacts/tokenizers
+  scalers: artifacts/scalers
+  label_mappings: artifacts/label_mappings
+
+reports:
+  figures: reports/figures
+  tables: reports/tables
+  final_report: reports/final_report.md
